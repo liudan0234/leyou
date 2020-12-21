@@ -25,3 +25,19 @@ zuul:
   prefix: /api
   routes:
     item-service: /item/** #将商品微服务映射到/item/**
+ly:
+  cors:
+    allowedOrigins:
+      - http://manage.leyou.com
+    allowedCredentials: true
+    allowedHeaders:
+      - "*"
+    allowedMethods:
+      - GET
+      - POST
+      - DELETE
+      - PUT
+      - OPTIONS
+      - HEAD
+    maxAge: 3600
+    filterPath: "/**"

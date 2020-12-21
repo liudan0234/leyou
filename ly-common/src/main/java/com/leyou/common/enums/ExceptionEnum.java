@@ -33,7 +33,9 @@ public enum ExceptionEnum {
     SEND_MESSAGE_ERROR(500, "短信发送失败！"),
     INVALID_ORDER_STATUS(500, "订单状态不正确！"),
 
-    UNAUTHORIZED(401, "登录失效或未登录！");
+    UNAUTHORIZED(401, "登录失效或未登录！"),
+    BRAND_SAVA_ERROR(500, "品牌保存失败!！"),
+    BRAND_UPDATE_ERROR(500, "品牌修改失败!！");
     private int status;
     private String message;
 

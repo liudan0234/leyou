@@ -1,7 +1,10 @@
 package com.leyou.item.service;
 
+import com.leyou.item.dto.CategoryDTO;
 import com.leyou.item.entity.TbCategory;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +15,12 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-12-18
  */
 public interface TbCategoryService extends IService<TbCategory> {
+    /**
+     * 根据父类id查询 集合信息
+     * @param parentId
+     * @return
+     */
+    List<CategoryDTO> findCategoryListById(Long parentId);
 
+    List<CategoryDTO> findBrandIdByCategory(Long brandId);
 }
